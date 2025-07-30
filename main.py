@@ -11,3 +11,4 @@ if not st.session_state.plan_selected:
     show_home()
 else:
     show_email_sender()
+
