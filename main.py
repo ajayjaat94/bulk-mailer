@@ -12,9 +12,8 @@ st.sidebar.markdown("[Contact Us](/?page=contact-us)")
 st.sidebar.markdown("[Cancellations & Refunds](/?page=refund-policy)")
 st.sidebar.markdown("[Shipping Policy](/?page=shipping-policy)")
 
-# Handle query parameters
-query_params = st.experimental_get_query_params()
-page = query_params.get("page", ["home"])[0]
+# Read query params
+page = st.query_params.get("page", "home")
 
 # Session state for app logic
 if "plan_selected" not in st.session_state:
